@@ -73,7 +73,7 @@ const Play = (props) => {
   return (
     <section className={classes.container}>
       {!isPlaying && <button onClick={startHandler}>Start</button>}
-      <div class={classes.button_container}>
+      <div className={classes.button_container}>
         <div className={classes.button}>
           <div className={classes.icon}>
             <i className="fa fa-floppy-o"></i>
