@@ -1,0 +1,67 @@
+.main_container {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  flex-direction: row;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5vh;
+}
+
+.play {
+  font-size: 3em;
+}
+
+/* .button {
+
+} */
+
+.blue {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3em;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.cardHolder {
+  width: 15em;
+}
+
+.card1 {
+  margin-left: 0em;
+  opacity: 0;
+}
+
+.card2 {
+  margin-right: -3em;
+  opacity: 0;
+}
+
+.card3 {
+  margin-right: 3em;
+  opacity: 0;
+}
+
+.card4 {
+  margin-right: 2em;
+  opacity: 0;
+}
+
+@media (min-width: 1300px) {
+  .card1 {
+    margin-left: 20em !important;
+  }
+  .card4 {
+    margin-right: 23em !important;
+  }
+}
