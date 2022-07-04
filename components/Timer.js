@@ -4,7 +4,7 @@ const Timer = (props) => {
   const [timer, setTimer] = useState(props.time);
   useEffect(() => {
     const timerInterval = setInterval(() => {
-      setTimer((prevState) => prevState - 0.5);
+      setTimer((prevState) => prevState - 1);
     }, 1000);
   }, []);
 
