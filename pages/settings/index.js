@@ -72,8 +72,9 @@ const Settings = () => {
       <Head>
         <title>Settings</title>
         <script
+          async
           src="https://kit.fontawesome.com/85c9375648.js"
-          crossorigin="anonymous"
+          crossOrigin="anonymous"
         ></script>
       </Head>
       <section className={classes.container}>
