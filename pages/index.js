@@ -47,13 +47,13 @@ const HomePage = () => {
         </section>
         <section className={classes.container}>
           <Link href="/play">
-            <button class="custom-btn btn-1">Play</button>
+            <button className="custom-btn btn-1">Play</button>
           </Link>
           <Link href="/settings">
-            <button class="custom-btn btn-1">Setting</button>
+            <button className="custom-btn btn-1">Setting</button>
           </Link>
           <Link href="#">
-            <button class="custom-btn btn-1">Rulebook</button>
+            <button className="custom-btn btn-1">Rulebook</button>
           </Link>
         </section>
         <section className={classes.blue}>

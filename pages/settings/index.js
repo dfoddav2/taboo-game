@@ -107,7 +107,7 @@ const Settings = () => {
                 animate={{ opacity: [0, 1] }}
                 transition={{ duration: 0.5 }}
               >
-                <i class="fa-solid fa-check"></i>
+                <i className="fa-solid fa-check"></i>
               </motion.span>
             )}
           </motion.button>
@@ -123,7 +123,7 @@ const Settings = () => {
                 animate={{ opacity: [0, 1] }}
                 transition={{ duration: 0.5 }}
               >
-                <i class="fa-solid fa-check"></i>
+                <i className="fa-solid fa-check"></i>
               </motion.span>
             )}
           </motion.button>
@@ -139,7 +139,7 @@ const Settings = () => {
                 animate={{ opacity: [0, 1] }}
                 transition={{ duration: 0.5 }}
               >
-                <i class="fa-solid fa-check"></i>
+                <i className="fa-solid fa-check"></i>
               </motion.span>
             )}
           </motion.button>
@@ -155,7 +155,7 @@ const Settings = () => {
                 animate={{ opacity: [0, 1] }}
                 transition={{ duration: 0.5 }}
               >
-                <i class="fa-solid fa-check"></i>
+                <i className="fa-solid fa-check"></i>
               </motion.span>
             )}
           </motion.button>
@@ -171,7 +171,7 @@ const Settings = () => {
                 animate={{ opacity: [0, 1] }}
                 transition={{ duration: 0.5 }}
               >
-                <i class="fa-solid fa-check"></i>
+                <i className="fa-solid fa-check"></i>
               </motion.span>
             ) : (
               "?"
