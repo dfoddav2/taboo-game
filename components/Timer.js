@@ -8,11 +8,9 @@ const Timer = (props) => {
     }, 1000);
   }, []);
 
-  console.log(timer);
-
   return (
     <Fragment>
-      <p>{timer}</p>
+      <p className={timer > 10 ? "timer" : "timer_danger"}>{timer}</p>
     </Fragment>
   );
 };

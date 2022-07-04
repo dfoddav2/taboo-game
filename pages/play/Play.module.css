@@ -5,7 +5,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2vh;
+  gap: 1.5vh;
 }
 
 .action_container {
@@ -24,4 +24,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.score {
+  color: #9a96af;
+  font-size: 3em;
 }

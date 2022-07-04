@@ -4,7 +4,6 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  
 }
 
 a {
@@ -19,11 +18,110 @@ a {
 button {
   background-color: #342b63;
   border: none;
-  border-radius: 10px;
+  border-radius: 5px;
+  border: 5px blue;
   color: white;
   font-size: 2em;
 }
 
 p {
   margin: 0;
+  font-size: 3em;
+}
+
+.timer {
+  color: #9a96af;
+}
+
+.timer_danger {
+  color: #ff8d83;
+}
+
+/* BUTTONS */
+.custom-btn {
+  padding: 10px 25px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  background: transparent;
+  outline: none !important;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+}
+
+/**** BTN No. 1 ****/
+.btn-1 {
+  border: 2px solid #342b63;
+  color: #342b63;
+}
+.btn-1:hover {
+  background: #342b63;
+  color: #FE6659;
+}
+.btn-1:active {
+  top: 2px;
+}
+
+
+/**** BTN No. 14 ****/
+.btn-14 {
+  border: 2px solid #342b63;
+  z-index: 1;
+  width: 5em;
+  color: #342b63;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.btn-14:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  background: #342b63;
+  transition: all 0.3s ease;
+}
+.btn-14:hover {
+  color: #FE6659;
+}
+.btn-14:hover:after {
+  left: 0;
+  width: 100%;
+}
+.btn-14:active {
+  top: 2px;
+}
+
+/**** BTN No. 15 ****/
+.btn-15 {
+  width: 5em;
+  border: 2px solid #342b63;
+  z-index: 1;
+  color: #342b63;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.btn-15:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  direction: rtl;
+  z-index: -1;
+  background: #342b63;
+  transition: all 0.3s ease;
+}
+.btn-15:hover {
+  color: #FE6659;
+}
+.btn-15:hover:after {
+  left: auto;
+  right: 0;
+  width: 100%;
+}
+.btn-15:active {
+  top: 2px;
 }

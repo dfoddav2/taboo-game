@@ -1,7 +1,8 @@
 import dynamic from "next/dynamic";
-import { useState } from "react";
+import { useState, Fragment } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { motion } from "framer-motion";
+import Head from "next/head";
 
 import { gameActions } from "../../store";
 
@@ -70,42 +71,78 @@ const Play = (props) => {
     setIsPlaying(false);
   };
 
+  // Animations
+
   return (
-    <section className={classes.container}>
-      {!isPlaying && <button onClick={startHandler}>Start</button>}
-      <div className={classes.button_container}>
-        <div className={classes.button}>
-          <div className={classes.icon}>
-            <i className="fa fa-floppy-o"></i>
+    <Fragment>
+      <Head>
+        <title>Play</title>
+      </Head>
+      <section className={classes.container}>
+        <p
+          className={classes.score}
+        >{`${scores["team1"]} | ${scores["team2"]}`}</p>
+        {!isPlaying && (
+          <button className="custom-btn btn-1" onClick={startHandler}>
+            Start
+          </button>
+        )}
+
+        {isPlaying && (
+          <button className="custom-btn btn-1" onClick={stopHandler}>
+            Stop
+          </button>
+        )}
+        {isPlaying && (
+          <motion.div
+            animate={{ y: [40, 0], opacity: [0, 1] }}
+            drag
+            whileDrag={{ scale: 1.05 }}
+            dragConstraints={{ left: 20, top: 20, right: 20, bottom: 20 }}
+          >
+            <Card
+              color={color}
+              solution={cardDetails.solution}
+              avoid={cardDetails.avoid}
+            />
+          </motion.div>
+        )}
+        {isPlaying && <Timer time={settings.time} />}
+        <div className={classes.actions_container}>
+          <div className={classes.next_miss}>
+            {isPlaying && (
+              <motion.button
+                animate={{ opacity: [0, 1] }}
+                className="custom-btn btn-1"
+                onClick={nextHandler}
+              >
+                Next
+              </motion.button>
+            )}
+            {isPlaying && (
+              <motion.button
+                animate={{ opacity: [0, 1] }}
+                className="custom-btn btn-1"
+                onClick={missHandler}
+              >
+                Miss
+              </motion.button>
+            )}
+          </div>
+          <div className={classes.skip}>
+            {isPlaying && (
+              <motion.button
+                animate={{ opacity: [0, 1] }}
+                className="custom-btn btn-1"
+                onClick={skipHandler}
+              >
+                Skip
+              </motion.button>
+            )}
           </div>
         </div>
-      </div>
-      {isPlaying && <button onClick={stopHandler}>Stop</button>}
-      <p>{`${scores["team1"]} | ${scores["team2"]}`}</p>
-      {isPlaying && (
-        <motion.div
-          drag
-          whileDrag={{ scale: 1.05 }}
-          dragConstraints={{ left: 20, top: 20, right: 20, bottom: 20 }}
-        >
-          <Card
-            color={color}
-            solution={cardDetails.solution}
-            avoid={cardDetails.avoid}
-          />
-        </motion.div>
-      )}
-      {isPlaying && <Timer time={settings.time} />}
-      <div className={classes.actions_container}>
-        <div className={classes.next_miss}>
-          {isPlaying && <button onClick={nextHandler}>Next</button>}
-          {isPlaying && <button onClick={missHandler}>Miss</button>}
-        </div>
-        <div className={classes.skip}>
-          {isPlaying && <button onClick={skipHandler}>Skip</button>}
-        </div>
-      </div>
-    </section>
+      </section>
+    </Fragment>
   );
 };
 

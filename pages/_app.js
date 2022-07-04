@@ -2,7 +2,7 @@ import "../styles/globals.css";
 import { Provider } from "react-redux";
 import store from "../store";
 import Layout from "../components/layout/Layout";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 function MyApp({ Component, pageProps, router }) {
   return (

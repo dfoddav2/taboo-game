@@ -74,13 +74,13 @@
   line-height: 60px;
   margin: 40px auto;
   letter-spacing: -0.07em;
-  text-shadow: white 2px 2px 2px;
+  color: #9a96af;
 }
 
 .range {
   display: block;
   -webkit-appearance: none;
-  background-color: #bdc3c7;
+  background-color: #c8c5d3;
   width: 300px;
   height: 5px;
   border-radius: 5px;
@@ -90,18 +90,18 @@
 
 .range::-webkit-slider-thumb {
   -webkit-appearance: none;
-  background-color: #e74c3c;
+  background-color: #fe6659;
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  border: 2px solid white;
+  border: 2px solid #fe6659;
   cursor: pointer;
   transition: 0.3s ease-in-out;
 }
 
 .range::-webkit-slider-thumb:hover {
-  background-color: white;
-  border: 2px solid #e74c3c;
+  background-color: rgb(255, 252, 246);
+  border: 2px solid #fe6659;
 }
 .range::-webkit-slider-thumb:active {
   transform: scale(1.6);
